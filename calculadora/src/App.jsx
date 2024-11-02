@@ -9,10 +9,10 @@ function App() {
 
   const calcularIMC = () => {
     const alturaMetros = altura / 100;
-    const imcCalculado = Math.round(peso / (alturaMetros * alturaMetros));
+    const imcCalculado = (peso / (alturaMetros * alturaMetros)).toFixed(2);
     console.log(`IMC calculado: ${imcCalculado}`); 
     setImc(imcCalculado);
-    classificarIMC(parseFloat(imcCalculado));a
+    classificarIMC(parseFloat(imcCalculado));
   };
   
   const classificarIMC = (imc) => {
